@@ -1,2 +1,3 @@
-# nnest-demo-acl
-The demo of create user and login which powered by NestJS.
+# nest-demo-acl
+
+The demo of authorization via Access-Control-List which powered by NestJS.
