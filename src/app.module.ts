@@ -7,6 +7,7 @@ import { User } from './user/entities/user.entity';
 import { Permission } from './user/entities/permission.entity';
 import { GroupAModule } from './group_a/group_a.module';
 import { JwtModule } from '@nestjs/jwt';
+import { GroupBModule } from './group_b/group_b.module';
 
 @Module({
   imports: [
@@ -35,6 +36,7 @@ import { JwtModule } from '@nestjs/jwt';
     }),
     UserModule,
     GroupAModule,
+    GroupBModule,
   ],
   controllers: [AppController],
   providers: [AppService],

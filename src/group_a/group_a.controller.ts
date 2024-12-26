@@ -2,48 +2,41 @@ import {
   Controller,
   Get,
   Post,
-  Body,
-  Patch,
-  Param,
   Delete,
   UseGuards,
   SetMetadata,
-  Inject,
+  Put,
 } from '@nestjs/common';
-import { GroupAService } from './group_a.service';
-import { CreateGroupADto } from './dto/create-group_a.dto';
-import { UpdateGroupADto } from './dto/update-group_a.dto';
 import { PermissionGuard } from 'src/user/permission.guard';
 import { LoginGuard } from 'src/user/login-guard';
 
 @Controller('group-a')
 export class GroupAController {
-  constructor(private readonly groupAService: GroupAService) {}
-
   @Post()
-  create(@Body() createGroupADto: CreateGroupADto) {
-    return this.groupAService.create(createGroupADto);
+  @UseGuards(LoginGuard, PermissionGuard)
+  @SetMetadata('permission', 'add_1')
+  create() {
+    return 'success create with permission: add_1';
   }
 
   @Get()
   @UseGuards(LoginGuard, PermissionGuard)
   @SetMetadata('permission', 'query_1')
   findAll() {
-    return this.groupAService.findAll();
+    return 'success findAll with permission: query_1';
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.groupAService.findOne(+id);
+  @Put()
+  @UseGuards(LoginGuard, PermissionGuard)
+  @SetMetadata('permission', 'update_1')
+  update() {
+    return 'success update with permission: update_1';
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateGroupADto: UpdateGroupADto) {
-    return this.groupAService.update(+id, updateGroupADto);
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.groupAService.remove(+id);
+  @Delete()
+  @UseGuards(LoginGuard, PermissionGuard)
+  @SetMetadata('permission', 'delete_1')
+  remove() {
+    return 'success delete with permission: delete_1';
   }
 }
