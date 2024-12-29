@@ -8,6 +8,7 @@ import { Permission } from './user/entities/permission.entity';
 import { GroupAModule } from './group_a/group_a.module';
 import { JwtModule } from '@nestjs/jwt';
 import { GroupBModule } from './group_b/group_b.module';
+import { RedisModule } from './redis/redis.module';
 
 @Module({
   imports: [
@@ -37,6 +38,7 @@ import { GroupBModule } from './group_b/group_b.module';
     UserModule,
     GroupAModule,
     GroupBModule,
+    RedisModule,
   ],
   controllers: [AppController],
   providers: [AppService],
