@@ -23,10 +23,10 @@ export class User {
   password: string;
 
   @CreateDateColumn()
-  created_time: Date;
+  create_time: Date;
 
   @UpdateDateColumn()
-  updated_time: Date;
+  update_time: Date;
 
   @ManyToMany(() => Permission)
   @JoinTable({
