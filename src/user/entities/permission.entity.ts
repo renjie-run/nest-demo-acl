@@ -23,8 +23,8 @@ export class Permission {
   desc: string;
 
   @CreateDateColumn()
-  created_time: Date;
+  create_time: Date;
 
   @UpdateDateColumn()
-  updated_time: Date;
+  update_time: Date;
 }
