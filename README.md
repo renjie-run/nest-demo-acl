@@ -12,7 +12,7 @@ Create database.
 create database acl-test default character set utf8mb4;
 ```
 
-For mysql connection configuration, please refer to [https://github.com/renjie-run/nest-demo-acl/blob/5f32b82b8bfa39e6d0b9f2cee15ad07761302317/src/app.module.ts#L15](https://github.com/renjie-run/nest-demo-acl/blob/5f32b82b8bfa39e6d0b9f2cee15ad07761302317/src/app.module.ts#L15)
+For mysql connection configuration, please refer to [https://github.com/renjie-run/nest-demo-acl/blob/5f32b82b8bfa39e6d0b9f2cee15ad07761302317/src/app.module.ts](https://github.com/renjie-run/nest-demo-acl/blob/5f32b82b8bfa39e6d0b9f2cee15ad07761302317/src/app.module.ts)
 
 
 ### Step2
