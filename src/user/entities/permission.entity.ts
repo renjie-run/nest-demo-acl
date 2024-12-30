@@ -26,5 +26,5 @@ export class Permission {
   created_time: Date;
 
   @UpdateDateColumn()
-  update_time: Date;
+  updated_time: Date;
 }
