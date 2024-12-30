@@ -24,7 +24,7 @@ Set `synchronize` to `true` before start the project, then start the project.
 ```ts
 TypeOrmModule.forRoot({
       ...
-      synchronize: false,
+      synchronize: true,
       ...
     })
 ```
